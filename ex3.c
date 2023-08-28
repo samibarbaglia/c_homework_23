@@ -4,7 +4,7 @@ int main() {
     int all_students = 0;
     int student = 0;
     int grade = 0;
-    int i = 0;
+    int i;
 
     printf("How many students: \n");
     scanf("%d", &all_students);

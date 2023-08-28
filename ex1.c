@@ -47,8 +47,7 @@ int main()
                 }
 
             }
-        }
-        else if (money < bus_price && taxi_price) {
+        } else if (money < bus_price && taxi_price) {
             printf("\nYOU NEED TO WALK HOME\n");
             break;
         }

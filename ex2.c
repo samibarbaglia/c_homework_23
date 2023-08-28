@@ -40,5 +40,6 @@ int main() {
     for (i = 0; i < 12; i++) {
         printf("%10d %10.2f %10.2f\n", i+1, month[i], tax[i]);
     }
+
     return 0;
 }
