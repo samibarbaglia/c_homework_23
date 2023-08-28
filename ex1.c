@@ -2,7 +2,6 @@
 
 int main()
 {
-
     float bus_price;
     float taxi_price;
     float money;

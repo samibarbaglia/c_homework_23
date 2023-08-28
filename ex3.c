@@ -40,6 +40,5 @@ int main() {
             printf("%-10d %-10d\n", i + 1, student_grades[i]);
         }
     }
-
     return 0;
 }
