@@ -1,4 +1,4 @@
-// I had help from milja with this exercise
+// had help from Milja with this exercise
 #include <stdio.h>
 
 int main() {
