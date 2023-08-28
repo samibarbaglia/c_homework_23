@@ -28,7 +28,7 @@ int main() {
         else if (total_income - income_limit < month[i]) {
             float over_limit = total_income - income_limit;
             float under_limit = month[i] - over_limit;
-            tax [i] = (under_limit * (tax_rate / 100)) + (over_limit * (tax_over /100));
+            tax [i] = (under_limit * (tax_rate / 100)) + (over_limit * (tax_over / 100));
         }
         else {
             tax[i] = month[i] * (tax_over / 100);
