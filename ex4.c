@@ -2,18 +2,28 @@
 
 int read_integer(void) {
     int numbers;
-    scanf("%d", &numbers);
-    return numbers;
+    do {
+        printf("\nEnter positive numbers or negative to stop:  ");
+
+        if (scanf("%d", &numbers) == 1) {
+            return numbers;
+        }
+        else if (scanf("%d", &numbers) != 1) {
+            while (getchar() != '\n');
+            printf("\n!! Invalid input !!\n");
+        }
+    } while (numbers == 0);
+    return 0;
 }
 
 int main() {
-    int i = 0;
+    float i = 0;
     float avg;
     float sum = 0;
 
     while (i >= 0) {
-        printf("\nEnter positive numbers or negative to stop: ");
-        int numbers = read_integer();
+        float numbers = read_integer();
+
         if (numbers < 0) {
             break;
         }
@@ -21,7 +31,7 @@ int main() {
         i++;
     }
     avg = sum / i;
-    printf("\nYou entered %.0d positive numbers. The average is %.3f", i, avg);
+    printf("\nYou entered %.0f positive numbers. The average is %.3f\n", i, avg);
 
     return 0;
 }
