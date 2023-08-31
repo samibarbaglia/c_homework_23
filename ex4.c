@@ -8,11 +8,10 @@ int read_integer(void) {
 
         if (scanf("%d", &numbers) == 1) {
             return numbers;
-        }
-        else if (scanf("%d", &numbers) != 1) {
-            while (getchar() != '\n');
+        } else if (getchar() != '\n') {
             printf("\n!! Invalid input !!\n");
         }
+
     } while (numbers == 0);
 }
 
