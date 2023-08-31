@@ -2,6 +2,7 @@
 
 int read_integer(void) {
     int numbers;
+
     do {
         printf("\nEnter positive numbers or negative to stop:  ");
 
@@ -13,7 +14,6 @@ int read_integer(void) {
             printf("\n!! Invalid input !!\n");
         }
     } while (numbers == 0);
-    return 0;
 }
 
 int main() {
