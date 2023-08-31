@@ -16,12 +16,12 @@ int read_integer(void) {
 }
 
 int main() {
-    float i = 0;
+    int i = 0;
     float avg;
-    float sum = 0;
+    int sum = 0;
 
     while (i >= 0) {
-        float numbers = read_integer();
+        int numbers = read_integer();
 
         if (numbers < 0) {
             break;
@@ -30,7 +30,7 @@ int main() {
         i++;
     }
     avg = sum / i;
-    printf("\nYou entered %.0f positive numbers. The average is %.3f\n", i, avg);
+    printf("\nYou entered %.0d positive numbers. The average is %.3f\n", i, avg);
 
     return 0;
 }
