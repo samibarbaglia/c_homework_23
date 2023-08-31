@@ -12,8 +12,10 @@ int main() {
 
     printf("Enter tax rate: \n");
     scanf("%f", &tax_rate);
+
     printf("Enter income limit: \n");
     scanf("%f", &income_limit);
+
     printf("Enter tax rate for income over the limit: \n");
     scanf("%f", &tax_over);
 
@@ -40,6 +42,5 @@ int main() {
     for (i = 0; i < 12; i++) {
         printf("%10d %10.2f %10.2f\n", i+1, month[i], tax[i]);
     }
-
     return 0;
 }
