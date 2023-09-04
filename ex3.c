@@ -36,14 +36,14 @@ int main() {
         }
     } while (student != 0);
 
-        printf("\n%-10s %-10s\n", "STUDENT", "GRADE");
+    printf("\n%-10s %-10s\n", "STUDENT", "GRADE");
 
-        for (i = 1; i <= all_students; i++) {
-            if (student_grades[i] == -1) {
-                printf("%-10d %-10s\n", i, "N/A");
-            } else {
-                printf("%-10d %-10d\n", i, student_grades[i]);
-            }
+    for (i = 1; i <= all_students; i++) {
+        if (student_grades[i] == -1) {
+            printf("%-10d %-10s\n", i, "N/A");
+        } else {
+            printf("%-10d %-10d\n", i, student_grades[i]);
         }
-        return 0;
     }
+    return 0;
+}
