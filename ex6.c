@@ -26,7 +26,7 @@ int main() {
         scanf("%d", &player_choice);
 
         if (player_choice == 3) {
-            break;
+            printf("\nQuitting...\n");
         } else if (player_choice != 1 && player_choice != 2) {
             while (getchar() != '\n');
             printf("!! Invalid input !!\n");
