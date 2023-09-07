@@ -31,5 +31,5 @@ bool read_positive(int *value) {
     } if (*value > 0) {
         return true;
     }
-
+    return 0;
 }
