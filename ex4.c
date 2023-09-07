@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-float read_integer(void) {
-    float numbers;
+int read_integer(void) {
+    int numbers;
 
     do {
         printf("\nEnter positive numbers or negative to stop:  ");
 
-        if (scanf("%f", &numbers) == 1) {
+        if (scanf("%d", &numbers) == 1) {
             return numbers;
         } else {
             printf("Invalid input!\n");
@@ -19,12 +19,13 @@ float read_integer(void) {
 int main() {
     int i = 0;
     float avg;
+    int loop = 1;
 
-    while (i >= 0) {
+    while (loop == 1) {
         float numbers = read_integer();
 
         if (numbers < 0) {
-            break;
+            loop = 0;
         }
         avg = avg + numbers;
         i++;

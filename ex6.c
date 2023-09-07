@@ -34,5 +34,6 @@ int main() {
         }
     } while (player_choice != 3);
 
+    printf("Bye!\n");
     return 0;
 }
