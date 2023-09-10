@@ -4,7 +4,7 @@
 void print_numbers(const int *array, int count);
 
 int main() {
-    int rounds = 5;
+    int rounds = 15;
     int random_array[rounds];
     int i = 0;
 
