@@ -12,6 +12,7 @@ int main() {
         random_array[i] = rand();
         i++;
     }
+
     print_numbers(random_array, rounds);
 }
 
