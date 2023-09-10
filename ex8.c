@@ -16,6 +16,7 @@ int main() {
     print_numbers(random_array, rounds);
 }
 
+
 void print_numbers(const int *array, int count) {
     for (int i = 0; i < count; i++) {
         printf("%8d\n", array[i]);
