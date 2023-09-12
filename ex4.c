@@ -22,6 +22,7 @@ int main() {
     int loop = 1;
 
     while (loop == 1) {
+
         float numbers = read_integer();
 
         if (numbers < 0) {
