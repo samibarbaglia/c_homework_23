@@ -6,7 +6,7 @@ int read_integer(void) {
     do {
         printf("\nEnter positive numbers or negative to stop:  ");
 
-        if (scanf("%d", &numbers) == 1) {
+        if (scanf("%d", &numbers) > 0) {
             return numbers;
         } else {
             printf("Invalid input!\n");
@@ -18,7 +18,7 @@ int read_integer(void) {
 
 int main() {
     int i = 0;
-    float avg;
+    float avg = 0;
     int loop = 1;
 
     while (loop == 1) {
@@ -26,9 +26,10 @@ int main() {
 
         if (numbers < 0) {
             loop = 0;
+        } else {
+            avg = avg + numbers;
+            i++;
         }
-        avg = avg + numbers;
-        i++;
     }
     avg = avg / i;
     printf("\nYou entered %.0d positive numbers. The average is %.3f\n", i, avg);
