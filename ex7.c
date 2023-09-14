@@ -21,6 +21,8 @@ int main(void) {
     printf("\nI give up! See you later!\n");
 }
 
+
+
 bool read_positive(int *value) {
 
     printf("\nEnter a positive number: \n");

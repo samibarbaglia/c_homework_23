@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int read_range(int low, int high) {

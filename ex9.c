@@ -1,7 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int find_first(const unsigned int *array, unsigned int what);
+int find_first(const unsigned int *array, unsigned int what) {
+
+    for (int i = 0; array[i] != 0; i++) {
+        if (array[i] == what) {
+            return i;
+        }
+    }
+    return -1;
+}
 
 int main() {
     const int size = 20;
@@ -29,7 +37,8 @@ int main() {
             }
             printf("\nEnter number to search or 0 to stop: ");
         }
-        //actual array and user number choice testing
+
+        //actual array and user choice testing
         int result = find_first(random_array, choice);
         if (result != -1) {
             printf("Number found at index [%d]\n", result);
@@ -37,14 +46,4 @@ int main() {
             printf("Number not found\n");
         }
     } while (choice != 0);
-}
-
-
-int find_first(const unsigned int *array, unsigned int what) {
-    for (int i = 0; array[i] != 0; i++) {
-        if (array[i] == what) {
-            return i;
-        }
-    }
-    return -1;
 }
