@@ -17,5 +17,4 @@ int main() {
         user_str[i] = '\0';
         printf("Lenght of string: %d\n", i);
     }
-
 }
