@@ -14,9 +14,7 @@ int main() {
         for (i = 0; user_str[i] != '\n' && user_str[i] != 0; i++) {
             // empty loop for checking
         }
-
         user_str[i] = '\0';
         printf("Lenght of string: %d\n", i);
-
     }
 }
