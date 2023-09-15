@@ -33,6 +33,7 @@ int main() {
     scanf("%s", new_char);
 
     count = replace_char(text, new_char);
+
     if (count == 0) {
         printf("String was not modified\n");
     } else {
