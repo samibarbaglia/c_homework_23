@@ -3,8 +3,6 @@
 
 #define BUFFERMAX 1000
 
-// TEST
-
 int replace_char(char *str, const char *repl) {
     if (strlen(repl) != 2) {
         printf("Invalid");
