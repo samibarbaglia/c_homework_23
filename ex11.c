@@ -5,7 +5,7 @@
 
 int replace_char(char *str, const char *repl) {
     if (strlen(repl) != 2) {
-        printf("Invalid");
+        printf("Invalid input\n");
         return 0;
     }
 
