@@ -18,16 +18,12 @@ int main() {
     test = fopen(filename, "r");
 
     if (test == NULL) {
-        fprintf(stderr, "Error, no file '%s'\n", filename);
+        fprintf(stderr, "ERROR: No file '%s'\n", filename);
     }
 
     while (test != NULL) {
-        printf("File content:\n");
-
         while (fscanf(test, "%d", &count) == 1) {
-            printf("%d\n", count);
             lines++;
-
             if (count < lowest) {
                 lowest = count;
             } else if (count > highest) {
