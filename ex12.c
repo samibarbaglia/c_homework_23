@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>so
+#include <string.h>
 
 #define BUFFERMAX 1000
 
