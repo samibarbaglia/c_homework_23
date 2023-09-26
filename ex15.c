@@ -3,18 +3,18 @@
 #include <ctype.h>
 
 #define MAX_CHARACTERS 81
-#define MAX_SIZE 2
+#define MAX_SIZE 40
 
-struct menu_item_ {
+typedef struct menu_item_ {
     char name[50];
     double price;
-};
+} menu_item;
 
 int main() {
     FILE *file;
     char filename[MAX_CHARACTERS];
-    char food[MAX_SIZE]= {0};
-    int lines_read = 0;
+    menu_item menu[MAX_SIZE];
+    int menu_read = 0;
 
 
     printf("Enter file: \n");
@@ -26,7 +26,15 @@ int main() {
     if (file == NULL) {
         fprintf(stderr, "ERROR: No file '%s'\n", filename);
     }
-    else {
+    while (menu_read < MAX_SIZE && fscanf(file, "%[^;];%lf\n", menu[menu_read].name, &menu[menu_read].price) == 2) {
+        menu_read++;
+    }
+    if (menu_read >= MAX_SIZE) {
+        fprintf(stderr, "WARNING: More lines than allowed. Extra lines deleted.\n");
+    }
+    fclose(file);
 
+    for (int i = 0; i < menu_read; i++) {
+        printf("%.2lf %2s\n", menu[i].price, menu[i].name);
     }
 }
