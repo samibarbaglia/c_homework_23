@@ -28,13 +28,12 @@ int main() {
     }
     while (menu_read < MAX_SIZE && fscanf(file, "%[^;];%lf\n", menu[menu_read].name, &menu[menu_read].price) == 2) {
         menu_read++;
+    } if (menu_read >= MAX_SIZE) {
+        fprintf(stderr, "WARNING: More items than allowed. Extra items not printed.\n");
     }
-    if (menu_read >= MAX_SIZE) {
-        fprintf(stderr, "WARNING: More lines than allowed. Extra lines deleted.\n");
-    }
-    fclose(file);
 
+    fclose(file);
     for (int i = 0; i < menu_read; i++) {
-        printf("%.2lf %2s\n", menu[i].price, menu[i].name);
+        printf("%-8.2lf %s\n", menu[i].price, menu[i].name);
     }
 }
