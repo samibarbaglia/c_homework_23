@@ -11,7 +11,12 @@ typedef struct node {
 
 
 void add_to_list(nnode **head, nnode **tail, int data) {
-    nnode *new_node = (nnode *) malloc(sizeof(nnode));
+    nnode *new_node = (nnode *)malloc(MAX_CHARACTERS * sizeof(nnode));
+    if (new_node == NULL) {
+        printf("!! Error !!\n");
+        return;
+    }
+
     new_node->number = data;
     new_node->next = NULL;
 
@@ -55,10 +60,10 @@ int main() {
 
         int user_data_int = atoi(user_data);
 
-        if ((strcmp(user_data, "end") != 0)) {
-            //empty so that code won't print "invalid input" for end
+        if ((strcmp(user_data, "end") == 0)) {
+            printf("Quitting...\n");
         }
-        if (user_data_int != 0) {
+        else if (user_data_int != 0) {
             add_to_list(&head, &tail, user_data_int);
         }
         else {
