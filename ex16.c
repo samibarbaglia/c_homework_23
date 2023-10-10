@@ -11,7 +11,7 @@ typedef struct node {
 
 
 void add_to_list(nnode **head, nnode **tail, int data) {
-    nnode *new_node = (nnode *)malloc(MAX_CHARACTERS * sizeof(nnode));
+    nnode *new_node = (nnode *)malloc(sizeof(nnode));
     if (new_node == NULL) {
         printf("!! Error !!\n");
         return;
@@ -29,18 +29,18 @@ void add_to_list(nnode **head, nnode **tail, int data) {
 }
 
 
-void print_list(nnode **i) {
-    while (*i != NULL) {
-        printf("%d\n", (*i)->number);
-        *i = (*i)->next;
+void print_list(nnode **head) {
+    while (*head != NULL) {
+        printf("%d\n", (*head)->number);
+        *head = (*head)->next;
     }
 }
 
 
-void clear_list(nnode **i) {
-    while (*i != NULL) {
-        nnode *temp = *i;
-        *i = (*i)->next;
+void clear_list(nnode **head) {
+    while (*head != NULL) {
+        nnode *temp = *head;
+        *head = (*head)->next;
         free(temp);
     }
 }
@@ -58,7 +58,7 @@ int main() {
         fgets(user_data, sizeof(user_data), stdin);
         user_data[strlen(user_data) - 1] = '\0';
 
-        int user_data_int = atoi(user_data);
+        int user_data_int = atoi(user_data); //scanf tai strol
 
         if ((strcmp(user_data, "end") == 0)) {
             printf("Quitting...\n");
@@ -70,8 +70,7 @@ int main() {
             printf("!! Invalid input !!\n");
         }
     }
-    nnode *i = head;
     printf("--------------\n");
-    print_list(&i);
-    clear_list(&i);
+    print_list(&head);
+    clear_list(&head);
 }
